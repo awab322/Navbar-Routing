@@ -1,0 +1,156 @@
+nav
+{
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    padding: 15px;
+    position: relative;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 99;
+}
+
+.logo
+{
+    font-weight: 600;
+    font-size: 25px;
+    color: tomato;
+    text-decoration: none;
+}
+.logo font
+{
+    color: white;
+}
+
+.header_items
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 60px;
+}
+
+.header_items li a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+.header_items li:last-child a
+{
+    text-decoration: none;
+    background: darkred;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.header_items li a:hover , .header_items li a.active 
+{
+    background: white;
+    color: black;
+    height: 100%;
+}
+
+
+.page_heading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #868686;
+    background-color: #fff;
+    font-size: 40px;
+   
+}
+
+.page_heading_error
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80vh;
+    position: relative;
+    color: red; 
+
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #fff;
+    font-size: 40px;
+
+}
+
+.menu_icon
+{
+    display: none;
+}
+.fas
+{
+    cursor: pointer;
+}
+.menu_icon .fa-times
+{
+   transform: rotate(360deg);
+   transition: all 0.2s ease-in-out; 
+}
+.menu_icon .fa-bars
+{
+   transform: rotate(180deg);
+   transition: all 0.2s ease-in; 
+}
+
+@media screen and (max-width:600px) 
+{
+    .menu_icon
+    {
+        display: block;
+        padding: 5px;
+    }
+    .header_items
+    {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        right: 0;
+        top: 62px;
+        transition: all 0.5s ease-in-out;
+        
+    }
+    .header_items li
+    {
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .header_items li:last-child
+    {
+        margin-bottom: 0px;
+    }
+    .header_items li a, .header_items li:last-child a
+    {
+        width: 100px;
+        display: block;
+        margin: auto;
+    }
+
+    .header_items.close
+    {
+        top: -400%;
+        transition: all 0.5s ease-in;
+    }
+    
+
+}
