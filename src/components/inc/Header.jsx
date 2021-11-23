@@ -9,7 +9,7 @@ const Header = () => {
         return (
             <> 
             <li>
-                <NavLink to={url} key={index} >{title}</NavLink>
+                <NavLink to={url} key={index} onClick={handleClick}>{title}</NavLink>
             </li>
             </>
         )
